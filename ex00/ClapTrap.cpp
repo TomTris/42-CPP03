@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 07:35:31 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/02 10:23:57 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/03 20:00:12 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void ClapTrap::attack(const std::string & target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (getHP() == 0)
-		std::cout << "\033[31mClaptrap " << getName() << ": dead already, stop attack\033[0m" << std::endl;
+		std::cout << "\033[31mClaptrap " << getName() << " is dead already, stop attack\033[0m" << std::endl;
 	else
 	{
 		if (getHP() <= (int) amount)
@@ -85,7 +85,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (getHP() == 0)
 		std::cout << "\033[32mClaptrap " << getName() << ": \033[33mdead already, can't be repaired\033[0m" << std::endl;
-	else if (getHP() == 10)
+	else if (getHP() >= 10)
 		std::cout << "\033[32mClaptrap " << getName() << ": \033[33mHit Poits full, can't be repaired\033[0m" << std::endl;
 	else if (getMana() == 0)
 		std::cout << "\033[32mClaptrap " << getName() << ": \033[33m0 Energy Point left, can't be repaired\033[0m" << std::endl;
