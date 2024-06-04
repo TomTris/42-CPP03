@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:52:54 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 15:57:31 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 15:58:38 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 		else
 			_HP += amount;
 		_EP -= 1;
-		std::cout << "ClapTrap " << _name << " was repaired, has " << _HP << "Hit Points now and has " << _EP << " left." << std::endl;
+		std::cout << "ClapTrap " << _name << " was repaired, has " << _HP << " Hit Points now and has " << _EP << " left." << std::endl;
 	}
 }
