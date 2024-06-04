@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/02 07:35:35 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/02 21:06:53 by qdo              ###   ########.fr       */
+/*   Created: 2024/06/04 14:52:56 by qdo               #+#    #+#             */
+/*   Updated: 2024/06/04 15:27:06 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,26 @@
 
 #include <iostream>
 
+class ClapTrap {
 
-class ClapTrap
-{
 
-private:
-	std::string	_name;
-	int 		_hit_points;
-	int 		_energy_points;
-	int 		_attack_damage;
+protected:
+	std::string _name;
+	unsigned int _HP;
+	unsigned int _EP;
+	unsigned int _AD;
 
 public:
+	~ClapTrap();
 	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap & src);
-	~ClapTrap();
-
-	std::string getName(void) const;
-	int			getHP(void) const;
-	int			getMana(void) const;
-	int			getDamage(void) const;
-
-	void		setName(std::string name);
-	void		setHP(int nbr);
-	void		setMana(int nbr);
-	void		setDamage(int nbr);
+	ClapTrap & operator=(ClapTrap & src);
 	
-	ClapTrap & operator=(ClapTrap &src);
-
-	void attack(const std::string &target);
+	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
-	
 };
+
 
 #endif
