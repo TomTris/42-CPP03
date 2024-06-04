@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:52:56 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 15:27:06 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 15:51:12 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	ClapTrap(ClapTrap & src);
 	ClapTrap & operator=(ClapTrap & src);
 	
-	void attack(const std::string& target);
+	virtual void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };

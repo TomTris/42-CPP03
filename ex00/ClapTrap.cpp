@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:52:54 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 15:39:07 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 15:58:27 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		_HP = 0;
 	else
 		_HP -= amount;
-	std::cout << "ClapTrap " << _name << " was attacked, lost " << amount << "Hit Points, has " << _HP << " Hit Points left.";
+	std::cout << "ClapTrap " << _name << " was attacked, lost " << amount << " Hit Points, has " << _HP << " Hit Points left.";
 	if (_HP == 0)
 		std::cout << " " << _name <<" die.";
 	std::cout << std::endl;
@@ -93,6 +93,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 		else
 			_HP += amount;
 		_EP -= 1;
-		std::cout << "ClapTrap " << _name << " was repaired, has " << _HP << "Hit Points now and has " << _EP << " left." << std::endl;
+		std::cout << "ClapTrap " << _name << " was repaired, has " << _HP << " Hit Points now and has " << _EP << " left." << std::endl;
 	}
 }
