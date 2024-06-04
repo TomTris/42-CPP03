@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:54:20 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 15:55:10 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 16:07:40 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ ScavTrap& ScavTrap::operator=(ScavTrap &src)
 	_HP = src._HP;
 	_EP = src._EP;
 	_AD = src._AD;
+	_guard = src._guard;
 	return (*this);
 }
 
