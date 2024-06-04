@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:54:20 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 16:28:26 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 20:40:46 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_AD = 20;
 }
 
-ScavTrap::ScavTrap(ScavTrap & src) : ScavTrap(src)
+ScavTrap::ScavTrap(ScavTrap & src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap Copy Constructor called" << std::endl;
 	if (this != &src)
@@ -52,17 +52,6 @@ ScavTrap& ScavTrap::operator=(ScavTrap &src)
 	_AD = src._AD;
 	_guard = src._guard;
 	return (*this);
-}
-
-void ScavTrap::guardGate(void)
-{
-	if (_guard == false)
-	{
-		_guard = true;
-		std::cout << "ScavTrap " << _name << " is now GuardGate" << std::endl;
-		return;
-	}
-	std::cout << "ScavTrap " << _name << " is already GuardGate" << std::endl;
 }
 
 void ScavTrap::guardGate(void)
