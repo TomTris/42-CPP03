@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 16:00:05 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 16:05:26 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 16:12:00 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_AD = 20;
 }
 
-FragTrap::FragTrap(FragTrap & src)
+FragTrap::FragTrap(FragTrap & src) : ClapTrap(src)
 {
 	std::cout << "FragTrap Copy Constructor called" << std::endl;
 	if (this != &src)
