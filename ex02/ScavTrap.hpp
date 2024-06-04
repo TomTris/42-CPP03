@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:40:23 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 16:00:26 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 16:27:41 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 	ScavTrap & operator=(ScavTrap & src);
 
 	void guardGate(void);
+	void attack(const std::string& target);
 };
 
 
