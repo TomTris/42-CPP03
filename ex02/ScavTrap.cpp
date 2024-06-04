@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:54:20 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 16:02:51 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 16:11:49 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_AD = 20;
 }
 
-ScavTrap::ScavTrap(ScavTrap & src)
+ScavTrap::ScavTrap(ScavTrap & src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap Copy Constructor called" << std::endl;
 	if (this != &src)
