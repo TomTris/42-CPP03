@@ -6,12 +6,12 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:40:23 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 15:54:13 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 16:00:39 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
 
