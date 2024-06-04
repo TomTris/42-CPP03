@@ -5,56 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/03 16:44:54 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/03 19:24:38 by qdo              ###   ########.fr       */
+/*   Created: 2024/06/04 16:00:05 by qdo               #+#    #+#             */
+/*   Updated: 2024/06/04 16:05:26 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap()
-{
-	std::cout << "FrapTrap" << getName() << std::endl;
-	this->setName("Default");
-	this->setHP(100);
-	this->setMana(100);
-	this->setDamage(30);
-}
-FragTrap::FragTrap(std::string name) : ClapTrap(name)
-{
-	std::cout << "FrapTrap" << getName() << std::endl;
-	this->setName(name);
-	this->setHP(100);
-	this->setMana(100);
-	this->setDamage(30);
-}
-
-FragTrap::FragTrap(FragTrap const &src)
-{
-	std::cout << "ScavTrap Copy Constructor called" << std::endl;
-	this->setName(src.getName());
-	this->setHP(src.getHP());
-	this->setMana(src.getHP());
-	this->setDamage(src.getHP());
-}
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap " << this->getName() << " now left" << std::endl;
+	std::cout << "FragTrap " << _name << " now left" << std::endl;
+}
+FragTrap::FragTrap() : ClapTrap()
+{
+	_name = "Default";
+	std::cout << "FragTrap " << _name << " was born" << std::endl;
+	_HP = 100;
+	_EP = 50;
+	_AD = 20;
 }
 
-FragTrap & FragTrap::operator=(FragTrap const &src)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
+	_name = name;
+	std::cout << "FragTrap " << _name << " was born" << std::endl;
+	_HP = 100;
+	_EP = 50;
+	_AD = 20;
+}
+
+FragTrap::FragTrap(FragTrap & src)
+{
+	std::cout << "FragTrap Copy Constructor called" << std::endl;
 	if (this != &src)
-	{
-		this->setName(src.getName());
-		this->setHP(src.getHP());
-		this->setMana(src.getMana());
-		this->setDamage(src.getDamage());
-	}
+		*this = src;
+}
+
+FragTrap& FragTrap::operator=(FragTrap &src)
+{
+	std::cout << "FragTrap Copy Assignation called" << std::endl;
+	_name = src._name;
+	_HP = src._HP;
+	_EP = src._EP;
+	_AD = src._AD;
 	return (*this);
 }
 
-void FragTrap::highFiveGuys( void )
+void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << getName() << " said: Fight!!!" << std::endl;
+	std::cout << "ClapTrap " << _name << "Everyoneeeeee      Fightttttt!!!!!!!" << std::endl;
 }

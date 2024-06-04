@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/02 12:28:40 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/02 20:51:10 by qdo              ###   ########.fr       */
+/*   Created: 2024/06/04 15:40:23 by qdo               #+#    #+#             */
+/*   Updated: 2024/06/04 16:00:26 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,20 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
-{
+class ScavTrap : public ClapTrap {
 
 private:
-	bool _guarding_gate;
+	bool _guard;
 
 public:
+	~ScavTrap();
 	ScavTrap();
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap & src);
-	~ScavTrap();
+	ScavTrap & operator=(ScavTrap & src);
 
-	void	guardGate();
-	ScavTrap & operator=(ScavTrap const & Scavtrap);
-	void	attack(const std::string & name);
+	void guardGate(void);
 };
+
 
 #endif

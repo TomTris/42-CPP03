@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/03 16:44:53 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/03 16:56:27 by qdo              ###   ########.fr       */
+/*   Created: 2024/06/04 16:01:03 by qdo               #+#    #+#             */
+/*   Updated: 2024/06/04 16:05:19 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,17 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
-{
-
-private:
+class FragTrap : public ClapTrap {
 
 public:
+	~FragTrap();
 	FragTrap();
 	FragTrap(std::string name);
-	FragTrap(FragTrap const &src);
-	~FragTrap();
+	FragTrap(FragTrap & src);
+	FragTrap & operator=(FragTrap & src);
 
-	FragTrap & operator=(FragTrap const &src);
-	void highFiveGuys( void );
+	void highFivesGuys(void);
 };
-
 
 
 #endif
