@@ -5,11 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/02 07:35:37 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/03 16:41:33 by qdo              ###   ########.fr       */
+/*   Created: 2024/06/04 14:52:58 by qdo               #+#    #+#             */
+/*   Updated: 2024/06/04 15:55:55 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main()
@@ -42,7 +43,6 @@ int main()
 		c.attack("CloneTrap");
 		// for (int i = 0; i < 50; i++)
 		// 	c.attack("CloneTrap");
-		c.beRepaired(22);
 		c.beRepaired(22);
 		c.takeDamage(21);
 		c.beRepaired(22);
