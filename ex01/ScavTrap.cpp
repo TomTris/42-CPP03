@@ -6,7 +6,7 @@
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:54:20 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/04 16:11:13 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/04 16:28:26 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,28 @@ void ScavTrap::guardGate(void)
 		return;
 	}
 	std::cout << "ScavTrap " << _name << " is already GuardGate" << std::endl;
+}
+
+void ScavTrap::guardGate(void)
+{
+	if (_guard == false)
+	{
+		_guard = true;
+		std::cout << "ScavTrap " << _name << " is now GuardGate" << std::endl;
+		return;
+	}
+	std::cout << "ScavTrap " << _name << " is already GuardGate" << std::endl;
+}
+
+void ScavTrap::attack(std::string const &target)
+{
+	if (_HP == 0)
+		std::cout << "ScavTrap " << _name << " is already dead, can't attack " << target << std::endl;
+	else if (_EP == 0)
+		std::cout << "ScavTrap " << _name << " runs out of Energy Points, can't attack " << target << std::endl;
+	else
+	{
+		_EP -= 1;
+		std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _AD << " points of damage!" << std::endl;
+	}
 }
