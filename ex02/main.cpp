@@ -5,11 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/02 07:35:37 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/03 17:05:18 by qdo              ###   ########.fr       */
+/*   Created: 2024/06/04 14:52:58 by qdo               #+#    #+#             */
+/*   Updated: 2024/06/04 16:05:46 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
@@ -61,12 +62,12 @@ int main()
 		FragTrap f("Chadd");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
-		e.highFiveGuys();
+		e.highFivesGuys();
 		e.attack("some random dude");
 		e.takeDamage(101);
 		e.takeDamage(1);
 		e.attack("some random dude");
-		f.highFiveGuys();
+		f.highFivesGuys();
 		// for(int i = 0; i < 101; i++)
 		// 	f.attack("FragTrap-clone");
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
